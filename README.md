@@ -49,10 +49,11 @@ The **RocaNews** MVP will allow a user to delve into different news stories and 
 | Axios            | _A JavaScript library used to make HTTP requests from the backend_ |
 | Node.js          | _Javascript runtime environment that runs as asynchronously aids in building scalable network applications_ |
 | Ruby on Rails    | _ MVC based framework that helps create database-backend web apps _ |
+| [React Material UI Carousel](https://www.npmjs.com/package/react-material-ui-carousel)| _Carousel UI component for React using Material UI_ |
+| Post MVP              | Following are specifically post MVP |
 | JWT              | _Used to create unique user access tokens that allow for authentication_ |
 | bcrypt           | _Hashes passwords to protect user information from data leaks_ |
-| [React Material UI Carousel](https://www.npmjs.com/package/react-material-ui-carousel)| _Carousel UI component for React using Material UI_ |
-| [React Spinners](https://www.npmjs.com/package/react-spinners) | _Loading Spinners_ (Post MVP) |
+| [React Spinners](https://www.npmjs.com/package/react-spinners) | _Loading Spinners_ |
 
 <br>
 
