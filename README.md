@@ -52,7 +52,7 @@ The **RocaNews** MVP will allow a user to delve into different news stories and 
 | JWT              | _Used to create unique user access tokens that allow for authentication_ |
 | bcrypt           | _Hashes passwords to protect user information from data leaks_ |
 | [React Material UI Carousel](https://www.npmjs.com/package/react-material-ui-carousel)| _Carousel UI component for React using Material UI_ |
-| [React Spinners](https://www.npmjs.com/package/react-spinners) | _Loading Spinners_ |
+| [React Spinners](https://www.npmjs.com/package/react-spinners) | _Loading Spinners_ (Post MVP) |
 
 <br>
 
@@ -166,10 +166,12 @@ src
 ## Post-MVP
 
 - _Implement Authorization_
+- _Users will be able to create account_
 - _Users will be able to like comments and posts_
 - _Timestamps to comments_
 - _User avatars next to username_
-- _Create profiles for user where user can view their liked articles_
+- _Create My Profile page where user can view their liked articles_
+- _Loading Screen animations_
 
 ***
 
