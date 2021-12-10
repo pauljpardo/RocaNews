@@ -64,10 +64,11 @@ The **RocaNews** MVP will allow a user to delve into different news stories and 
 [Figma Wireframes](https://www.figma.com/)
 
 Home Page
-![Desktop Home](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/HomeLanding_ci7uve.png)
+![Desktop Home](https://user-images.githubusercontent.com/68570980/145633354-61118076-f19f-4088-a72d-28f764ede257.png)
 
 All News Page
-![All News]()
+![All News](https://user-images.githubusercontent.com/68570980/145633472-f5a0d435-2d7e-4a8b-b6ef-08a9b378aa1a.png)
+)
 
 Story detail page with comment C.U.D. Buttons
 ![Story detail]()
