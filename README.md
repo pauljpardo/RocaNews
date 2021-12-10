@@ -68,7 +68,7 @@ Home Page
 
 All News Page
 ![All News](https://user-images.githubusercontent.com/68570980/145633472-f5a0d435-2d7e-4a8b-b6ef-08a9b378aa1a.png)
-)
+
 
 Story detail page with comment C.U.D. Buttons
 ![Story detail]()
