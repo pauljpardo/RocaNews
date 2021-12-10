@@ -67,17 +67,11 @@ Home Page
 ![Desktop Home](https://user-images.githubusercontent.com/68570980/145633354-61118076-f19f-4088-a72d-28f764ede257.png)
 
 All News Page
-![All News](https://user-images.githubusercontent.com/68570980/145633472-f5a0d435-2d7e-4a8b-b6ef-08a9b378aa1a.png)
+![All News](https://user-images.githubusercontent.com/68570980/145633804-03075af0-df8e-4bf4-a605-56b15181dc10.png)
 
 
 Story detail page with comment C.U.D. Buttons
-![Story detail]()
-
-Create / Read/ Update / Delete Comment
-![C.R.U.D. comments]()
-
-Edit Comment pop up
-![Edit Comment](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/EditComment_eehzim.png)
+![Story detail](https://user-images.githubusercontent.com/68570980/145634617-190c9122-caef-4b87-b2a5-c67a21092e76.png)
 
 
 #### Component Tree
