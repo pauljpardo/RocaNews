@@ -156,7 +156,8 @@ src
 
 #### ERD Model
 
-![ERD]()
+![ERD](https://user-images.githubusercontent.com/68570980/145640343-457f70d3-13cf-41cf-992e-669957fe889d.png)
+
 <br>
 
 ***
