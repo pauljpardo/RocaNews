@@ -171,6 +171,7 @@ src
 - _User avatars next to username_
 - _Create My Profile page where user can view their liked articles_
 - _Loading Screen animations_
+- _Search bar_
 
 ***
 
