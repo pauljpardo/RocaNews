@@ -1,7 +1,5 @@
 # RocaNews
 
-## "Ride the news"
-
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
@@ -61,7 +59,7 @@ The **RocaNews** MVP will allow a user to delve into different news stories and 
 
 #### Wireframes
 
-[Figma Wireframes](https://www.figma.com/)
+[Figma Wireframes](https://www.figma.com/file/6bbfARpNzEETnfZoa5Xa6I/RocaNews?node-id=0%3A1)
 
 Home Page
 ![Desktop Home](https://user-images.githubusercontent.com/68570980/145633354-61118076-f19f-4088-a72d-28f764ede257.png)
@@ -76,9 +74,10 @@ Story detail page with comment C.U.D. Buttons
 
 #### Component Tree
 
-[Component Tree](https://whimsical.com/server-PkfKKuwW5eojFuaNYCLNZJ)
+[Component Tree](https://whimsical.com/component-hierarchy-rocanews-RUWVqDxhkvxta633WYL8T2)
 
-![Component Tree](https://res.cloudinary.com/dfryxohde/image/upload/v1636327533/Server/component_tree_hrd87d.png)
+![Component Tree](https://user-images.githubusercontent.com/68570980/145638423-f8b55cb6-f1fe-4e3b-b2f6-00cd02e2fd4d.png)
+
 
 #### Component Architecture
 
@@ -102,13 +101,16 @@ src
 |__ screens/
       |__ AllNews/
             |__ AllNews.jsx
+                |__ NewsCard.jsx
             |__ AllNews.css
       |__ StoryDetail/
             |__ StoryDetail.jsx
             |__ StoryDetail.css
-      |__ EditComment/
-            |__ EditComment.jsx
-            |__ EditComment.css
+               |__ EditComment.jsx
+               |__ EditComment.css
+               |__ CreateComment.jsx
+               |__ DeleteComment.jsx
+               |__ Carousel.jsx
       |__ Home/
             |__ Home.jsx
             |__ Home.css
