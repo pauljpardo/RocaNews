@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Layout() {
+export default function Layout(props) {
   return (
     <>
       <div>
@@ -11,6 +11,7 @@ export default function Layout() {
         <hr />
         <hr />
       </div>
+      <div className="layout-children">{props.children}</div>
     </>
   )
 }

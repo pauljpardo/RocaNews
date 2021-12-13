@@ -1,11 +1,18 @@
-import Layout from "./layouts/Layout";
+import { Switch } from "react-router";
+import { Route } from "react-router";
+import Splash from "./screens/Splash";
 
 
 function App() {
   return (
-    <>
-      <Layout />
-    </>
+    <div>
+      <Switch>
+        <Route exact path='/'>
+          <Splash />
+        </Route>
+        
+      </Switch>
+    </div>
   );
 }
 
