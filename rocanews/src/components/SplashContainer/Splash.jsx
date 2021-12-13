@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import { Link } from 'react-router-dom'
 
 export default function SplashContainer() {
   return (
@@ -28,6 +29,8 @@ export default function SplashContainer() {
                 <li><p>The Ghislaine Trial - a Roca wrap on Ghislaine Maxwell, whose high-profile trial began yesterday. Part 2 of 2 </p><img src='https://i.imgur.com/bdBPG6L.png'/> </li>
                 <hr />
                 <li><p>30,000 people trapped in Disneyland, abortion hearings, & more - quick cards for November 2 </p><img src='https://i.imgur.com/kQZKqoK.png'/></li>
+                
+                <p><b><Link className='allnews'>All News</Link></b></p>
               </ol>
               </div>
           </div>

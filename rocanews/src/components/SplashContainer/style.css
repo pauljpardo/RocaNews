@@ -19,6 +19,7 @@ body {
   overflow: hidden;
   max-width: 45ch;
   margin: 120px 30px;
+  line-height: 25px;
 }
 
 .story-list > ol > li > img {
@@ -35,10 +36,14 @@ ol {
   border-left: white solid 1px;
 }
 
-
-
 .right_panel {
   margin: -10px 30px 0px 500px
+}
+
+.allnews {
+  color: white;
+  margin: 100px 0px 0px 150px;
+  font-size: larger;
 }
 
 .recent {
