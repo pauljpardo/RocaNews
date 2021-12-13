@@ -1,0 +1,46 @@
+
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i.imgur.com/OJx66Hp.jpg);
+  mix-blend-mode: normal;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  font-family: Playfair Display;
+  background-attachment: fixed;
+}
+
+.main_div {
+  display: flex;
+}
+
+
+.left_panel {
+  overflow: hidden;
+  max-width: 45ch;
+  margin: 120px 30px;
+}
+
+.story-list > ol > li > img {
+  width: 100px;
+  height: 90px;
+}
+
+.story-list > ol > li {
+  width: 390px;
+  display: flex;
+}
+
+ol {
+  border-left: white solid 1px;
+}
+
+
+
+.right_panel {
+  margin: -10px 30px 0px 500px
+}
+
+.recent {
+  white-space: nowrap;
+}
