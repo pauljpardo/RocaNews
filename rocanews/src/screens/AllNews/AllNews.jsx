@@ -8,6 +8,7 @@ export default function AllNews() {
       <Layout>
         <AllNewsContainer />
       </Layout>
+      
     </>
   )
 }
