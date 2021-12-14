@@ -16,12 +16,18 @@ export default function AllNewsContainer() {
   return (
     <div>
       <h3>All News</h3>
-      {news.map((story) => (
-        <p>{story.title}</p>
-      ))}
-      {news.map((story) => (
-        <img src={story.img_url1}/>
-      ))}
+      <div className='news-card'>
+        <div className='news-text'>
+          {news.map((story) => (
+          <p>{story.title}</p>
+          ))}
+        </div>
+        <div className='news-img'>
+          {news.map((story) => (
+            <img src={story.img_url1}/>
+          ))}
+        </div>
+      </div>
     </div>
     
   )

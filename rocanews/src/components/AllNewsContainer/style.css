@@ -1,0 +1,14 @@
+.news-card {
+  /* display: flex; */
+}
+
+h3 {
+  text-align: center;
+}
+
+.news-img > img {
+  border-radius: 20px;
+  width: 340px;
+  height: 390px;
+}
+
