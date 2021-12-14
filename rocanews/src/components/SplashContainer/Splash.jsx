@@ -1,4 +1,3 @@
-import React from 'react'
 import './style.css'
 import { Link } from 'react-router-dom'
 
@@ -30,7 +29,7 @@ export default function SplashContainer() {
                 <hr />
                 <li><p>30,000 people trapped in Disneyland, abortion hearings, & more - quick cards for November 2 </p><img alt='' src='https://i.imgur.com/kQZKqoK.png'/></li>
                 
-                <p><b><Link to='/All' className='allnews'>All News</Link></b></p>
+                <p><b><Link to='/allnews' className='allnews'>All News</Link></b></p>
               </ol>
               </div>
           </div>
