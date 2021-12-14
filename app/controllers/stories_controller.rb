@@ -10,7 +10,7 @@ class StoriesController < ApplicationController
 
   # GET /stories/1
   def show
-    render json: @story
+    render json: @story, include: :comments
   end
 
   # POST /stories
