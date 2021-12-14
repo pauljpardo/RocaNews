@@ -1,6 +1,7 @@
 import { Switch } from "react-router";
 import { Route } from "react-router";
-import Splash from "./screens/Splash";
+import AllNews from "./screens/AllNews/AllNews";
+import Splash from "./screens/Splash/Splash";
 
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
         <Route exact path='/'>
           <Splash />
         </Route>
-        
+        <Route exact path='/allnews'>
+          <AllNews />
+        </Route>
       </Switch>
     </div>
   );
