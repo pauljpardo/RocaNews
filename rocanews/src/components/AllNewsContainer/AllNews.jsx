@@ -2,9 +2,9 @@ import './style.css'
 import { useState, useEffect } from 'react'
 import { Switch, Route, Link } from 'react-router-dom';
 import { getAllNews } from '../../services/news';
-import NewsCard from '../NewsCard/NewsCard';
+import MapCards from '../MapCards/MapCards';
 
-export default function AllNewsContainer() {
+export default function AllNewsContainer({stories}) {
   const [news, setNews] = useState([])
 
   useEffect(() => {
@@ -17,20 +17,10 @@ export default function AllNewsContainer() {
   return (
     <div>
       <h3>All News</h3>
-      <div className='news-card'>
-        <div className='news-text'>
-          <NewsCard
-          />
-          {/* {news.map((story) => (
-          <p>{story.title}</p>
-          ))}
-        </div>
-        <div className='news-img'>
-          {news.map((story) => (
-            <img src={story.img_url1}/>
-          ))} */}
-        </div>
-      </div>
+      <MapCards
+        stories={stories}
+        
+      />
     </div>
   )
 }

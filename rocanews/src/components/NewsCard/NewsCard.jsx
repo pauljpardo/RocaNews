@@ -1,16 +1,17 @@
-import { useState, Link } from "react"
+import { Link } from "react-router-dom"
 
 export default function NewsCard({story}) {
   return (
     <div className='news-card'>
-      <div className='news-card-img'>
-        <Link to={`stories/:story_id}`}>
+      <Link to={`stories/${story.id}`}>
+        <div className='news-card-img'>
+        
           <img src={story.img_url1} alt=''/>
-        </Link>
       </div>
-      <div className='news-card-title/description'>
+      <div className='news-card-title-description'>
         <p>{story.title}</p>
       </div>
+      </Link>
     </div>
   )
 }
