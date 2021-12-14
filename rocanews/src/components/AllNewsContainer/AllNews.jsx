@@ -1,6 +1,6 @@
 import './style.css'
 import { useState, useEffect } from 'react'
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import { getAllNews } from '../../services/news';
 
 export default function AllNewsContainer() {
