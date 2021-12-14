@@ -2,6 +2,7 @@ import './style.css'
 import { useState, useEffect } from 'react'
 import { Switch, Route, Link } from 'react-router-dom';
 import { getAllNews } from '../../services/news';
+import NewsCard from '../NewsCard/NewsCard';
 
 export default function AllNewsContainer() {
   const [news, setNews] = useState([])
@@ -18,14 +19,16 @@ export default function AllNewsContainer() {
       <h3>All News</h3>
       <div className='news-card'>
         <div className='news-text'>
-          {news.map((story) => (
+          <NewsCard
+          />
+          {/* {news.map((story) => (
           <p>{story.title}</p>
           ))}
         </div>
         <div className='news-img'>
           {news.map((story) => (
             <img src={story.img_url1}/>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>

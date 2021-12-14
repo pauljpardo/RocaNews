@@ -1,4 +1,4 @@
-import Layout from "../../../../public/rocanews/src/layouts/Layout";
+import Layout from '../../layouts/Layout';
 import NewsDetailContainer from "../../components/NewsDetailContainer/NewsDetail";
 
 
