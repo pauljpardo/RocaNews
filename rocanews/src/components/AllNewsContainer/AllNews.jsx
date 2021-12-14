@@ -1,5 +1,5 @@
 import './style.css'
-import { useState, useEffect, Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom';
 import { getAllNews } from '../../services/news';
 
@@ -8,12 +8,15 @@ export default function AllNewsContainer() {
 
   useEffect(() => {
     const fetchNews = async () => {
-      
+      const newsList = await getAllNews();
+      setNews(newsList);
     }
+    fetchNews();
   }, [])
   return (
     <div>
       <h3>All News</h3>
     </div>
+    
   )
 }
