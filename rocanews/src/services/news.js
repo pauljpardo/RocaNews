@@ -5,9 +5,9 @@ export const getAllNews = async () => {
   return resp.data
 }
 
-export const getHobby = async id => {
+export const getOneStory = async (id) => {
   try {
-      const response = await api.get(`/hobbies/${id}`)
+      const response = await api.get(`/stories/${id}`)
       return response.data
   } catch (error) {
       throw error

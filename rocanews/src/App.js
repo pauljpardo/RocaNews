@@ -15,7 +15,7 @@ function App() {
         <Route exact path='/allnews'>
           <AllNews />
         </Route>
-        <Route exact path='/stories/:story_id'>
+        <Route exact path='/stories/:id'>
           <NewsDetail />
         </Route>
       </Switch>

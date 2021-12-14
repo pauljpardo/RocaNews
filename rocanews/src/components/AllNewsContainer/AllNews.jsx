@@ -4,7 +4,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 import { getAllNews } from '../../services/news';
 import MapCards from '../MapCards/MapCards';
 
-export default function AllNewsContainer({stories}) {
+export default function AllNewsContainer() {
   const [news, setNews] = useState([])
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function AllNewsContainer({stories}) {
     <div>
       <h3>All News</h3>
       <MapCards
-        stories={stories}
+        stories={news}
         
       />
     </div>

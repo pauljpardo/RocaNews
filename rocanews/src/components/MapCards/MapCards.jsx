@@ -1,12 +1,12 @@
 import NewsCard from "../NewsCard/NewsCard";
 
 export default function MapCards({ stories }) {
+  console.log(stories)
   const card = stories?.map((story) => (
     <NewsCard
       key={story?.id}
       id={story?.id}
-      img_url1={story?.img_url1}
-      title={story?.title}
+      story={story}
     />
   ))
   return (
