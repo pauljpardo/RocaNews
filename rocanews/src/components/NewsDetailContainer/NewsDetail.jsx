@@ -19,8 +19,16 @@ export default function NewsDetailContainer() {
   return (
     <>
       <p>{story?.title}</p>
+      <div className='images'>
+      <img src={story?.img_url1} alt='' />
+      <img src={story?.img_url2} alt='' />
+      <img src={story?.img_url3} alt='' />
+      <img src={story?.img_url4} alt='' />
+      <img src={story?.img_url5} alt='' />
+      </div>
+
       {story?.comments.map(comment => (
-        <div>
+        <div className='comments'>
           <p>{comment.text}</p>
         </div>
       ))}
