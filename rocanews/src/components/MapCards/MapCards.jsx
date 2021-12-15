@@ -1,4 +1,5 @@
 import NewsCard from "../NewsCard/NewsCard";
+import './style.css'
 
 export default function MapCards({ stories }) {
   console.log(stories)
@@ -10,10 +11,10 @@ export default function MapCards({ stories }) {
     />
   ))
   return (
-    <div className='story-card'>
+    <>
       <div className='cards'>
         {card}
       </div>
-    </div>
+    </>
   )
 }

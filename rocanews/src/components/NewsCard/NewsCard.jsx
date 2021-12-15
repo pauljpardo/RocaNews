@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import './style.css'
+
 
 export default function NewsCard({story}) {
   return (
@@ -14,3 +16,4 @@ export default function NewsCard({story}) {
     </div>
   )
 }
+  

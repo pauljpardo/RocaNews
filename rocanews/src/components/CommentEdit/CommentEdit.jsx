@@ -1,51 +1,52 @@
 import { useState, useEffect } from "react";
 
-export default function CommentEdit({id, handleCommentEdit, comment}) {
+export default function CommentEdit({ id, handleCommentEdit, comment }) {
   const [formData, setFormData] = useState({
-    name: '',
-    text: ''
-  })
+    name: "",
+    text: "",
+  });
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   useEffect(() => {
-    setFormData({ name: comment.name , text: comment.text})
-  }, [comment])
- 
+    setFormData({ name: comment.name, text: comment.text });
+  }, [comment]);
 
   return (
     <form
-    onSubmit={(e) => {
-      e.preventDefault();
-        handleCommentEdit(formData, id)
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleCommentEdit(formData, id);
         setFormData({
-          name: '',
-          text: ''
-        })
-    }}
+          name: "",
+          text: "",
+        });
+      }}
     >
-      <label>Name:
+      <label>
+        Name:
         <input
-          type='text'
-          name='name'
+          type="text"
+          name="name"
           value={formData.name}
-          onChange={handleChange} />
+          onChange={handleChange}
+        />
       </label>
-      <label>Comment:
+      <label>
+        Comment:
         <input
-          type='text'
-          name='text'
+          type="text"
+          name="text"
           value={formData.text}
-          onChange={handleChange} />
+          onChange={handleChange}
+        />
       </label>
-      <button >Post</button>
+      <button>Post</button>
     </form>
-  )
+  );
 }
-
-

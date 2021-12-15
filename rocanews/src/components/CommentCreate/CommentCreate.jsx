@@ -1,47 +1,49 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function CommentCreate({ handleCommentCreate }) {
   const [formData, setFormData] = useState({
-    name: '',
-    text: ''
-  })
+    name: "",
+    text: "",
+  });
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
-    }))
-  }
-
- 
+    }));
+  };
 
   return (
     <form
-    onSubmit={(e) => {
-      e.preventDefault();
-        handleCommentCreate(formData)
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleCommentCreate(formData);
         setFormData({
-          name: '',
-          text: ''
-        })
-    }}
+          name: "",
+          text: "",
+        });
+      }}
     >
       <h4>Create Comment</h4>
-      <label>Name:
+      <label>
+        Name:
         <input
-          type='text'
-          name='name'
+          type="text"
+          name="name"
           value={formData.name}
-          onChange={handleChange} />
+          onChange={handleChange}
+        />
       </label>
-      <label>Comment:
+      <label>
+        Comment:
         <input
-          type='text'
-          name='text'
+          type="text"
+          name="text"
           value={formData.text}
-          onChange={handleChange} />
+          onChange={handleChange}
+        />
       </label>
-      <button >Post</button>
+      <button>Post</button>
     </form>
-  )
+  );
 }

@@ -1,0 +1,19 @@
+
+.news-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #E5E5E5;
+  width: 400px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+
+.news-card-img {
+  display: flex;
+  padding: 30px;
+}
+
+.news-card-title-description {
+  display: flex;
+  padding: 20px;
+}

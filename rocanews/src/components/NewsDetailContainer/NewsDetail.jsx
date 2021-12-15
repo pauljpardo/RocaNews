@@ -4,6 +4,9 @@ import { useParams } from "react-router";
 import CommentCreate from "../CommentCreate/CommentCreate";
 import CommentEdit from "../CommentEdit/CommentEdit";
 import { deleteComment, postComment, putComment } from "../../services/comments";
+import { Link } from 'react-router-dom'
+import './style.css'
+
 
 export default function NewsDetailContainer() {
   const [story, setStory] = useState(null);
@@ -44,6 +47,7 @@ export default function NewsDetailContainer() {
 
   return (
     <>
+      <span><Link to='/allnews'>Back to All News</Link></span>
       <p>{story?.title}</p>
       <div className="images">
         <img src={story?.img_url1} alt="" style={{ height: 800, width: 670 }} />
