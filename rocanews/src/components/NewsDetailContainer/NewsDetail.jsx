@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react'
 import api from '../../services/apiconfig'
 import { useParams } from 'react-router'
 import CommentCreate from '../CommentCreate/CommentCreate'
-import { postComment } from '../../services/comments'
+import { deleteComment, postComment } from '../../services/comments'
 
 
 export default function NewsDetailContainer() {
  
   const [story, setStory] = useState(null)
   const { id } = useParams()
+
+  const [comments, setComments] = useState([])
+
   useEffect(() => {
     const getSpecificStory = async () => {
       const story = await api.get(`/stories/${id}`)
@@ -19,6 +22,11 @@ export default function NewsDetailContainer() {
  } , [])
   
   
+  
+  const handleCommentDelete = async (id) => {
+    await deleteComment(id);
+    setComments(prevState=> prevState.filter(comment => comment.id !== id))
+  }
   
   return (
     <>
@@ -35,7 +43,8 @@ export default function NewsDetailContainer() {
         <div className='comments'>
           <p><i>{comment.name} says</i></p>
           <p>{comment.text}</p>
-          <button>Delete</button>
+          <button>Edit</button>
+          <button onClick={()=> handleCommentDelete(comment.id)}>Delete</button>
         </div>
         
       ))}
