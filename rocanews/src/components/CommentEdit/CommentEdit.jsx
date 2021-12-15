@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function CommentEdit({id, handleCommentEdit}) {
+export default function CommentEdit({id, handleCommentEdit, comment}) {
   const [formData, setFormData] = useState({
     name: '',
     text: ''
@@ -13,6 +13,9 @@ export default function CommentEdit({id, handleCommentEdit}) {
     }))
   }
 
+  useEffect(() => {
+    setFormData({ name: comment.name , text: comment.text})
+  }, [comment])
  
 
   return (

@@ -58,6 +58,7 @@ export default function NewsDetailContainer() {
           {isEditing === comment.id ? (
             <CommentEdit
               id={comment.id}
+              comment={comment}
               handleCommentEdit={handleCommentEdit}
             />
           ) : (
