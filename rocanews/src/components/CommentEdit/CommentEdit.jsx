@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function CommentEdit() {
+export default function CommentEdit({id, handleCommentEdit}) {
   const [formData, setFormData] = useState({
     name: '',
     text: ''
@@ -19,7 +19,7 @@ export default function CommentEdit() {
     <form
     onSubmit={(e) => {
       e.preventDefault();
-        // handleCommentCreate(formData)
+        handleCommentEdit(formData, id)
         setFormData({
           name: '',
           text: ''

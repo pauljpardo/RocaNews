@@ -29,7 +29,10 @@ export default function NewsDetailContainer() {
 
   const handleCommentEdit = async (formData, commentId) => {
     const newComment = await putComment(formData, commentId);
-    setComments((prevState) => [...prevState, newComment]);
+    setComments(prevState => prevState.map(comment => {
+      return comment.id === commentId ? newComment : comment
+    }))
+    setIsEditing(false)
   };
 
   const handleCommentDelete = async (id) => {
@@ -53,7 +56,10 @@ export default function NewsDetailContainer() {
       {comments.map((comment) => (
         <div className="comments">
           {isEditing === comment.id ? (
-            <CommentEdit />
+            <CommentEdit
+              id={comment.id}
+              handleCommentEdit={handleCommentEdit}
+            />
           ) : (
             <div>
               <p>
