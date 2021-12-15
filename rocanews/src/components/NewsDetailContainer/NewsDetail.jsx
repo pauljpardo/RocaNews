@@ -19,6 +19,7 @@ export default function NewsDetailContainer() {
  } , [])
   
   
+  
   return (
     <>
       <p>{story?.title}</p>
@@ -34,7 +35,9 @@ export default function NewsDetailContainer() {
         <div className='comments'>
           <p><i>{comment.name} says</i></p>
           <p>{comment.text}</p>
+          <button>Delete</button>
         </div>
+        
       ))}
       {/* Dont call title unless story is true */}
       <CommentCreate />

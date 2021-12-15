@@ -20,7 +20,12 @@ export default function CommentCreate() {
   // }
 
   return (
-    <form>
+    <form
+    // onSubmit={(e) => {
+    //   e.preventDefault();
+    //   handleCommentCreate(formData)
+    // }}
+    >
       <h4>Create Comment</h4>
       <label>Name:
         <input
