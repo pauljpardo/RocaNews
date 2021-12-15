@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-export default function CommentCreate({ handleCommentCreate }) {
+export default function CommentEdit() {
   const [formData, setFormData] = useState({
     name: '',
     text: ''
@@ -19,14 +19,13 @@ export default function CommentCreate({ handleCommentCreate }) {
     <form
     onSubmit={(e) => {
       e.preventDefault();
-        handleCommentCreate(formData)
+        // handleCommentCreate(formData)
         setFormData({
           name: '',
           text: ''
         })
     }}
     >
-      <h4>Create Comment</h4>
       <label>Name:
         <input
           type='text'
@@ -45,3 +44,5 @@ export default function CommentCreate({ handleCommentCreate }) {
     </form>
   )
 }
+
+
