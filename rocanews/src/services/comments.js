@@ -5,8 +5,8 @@ export const getAllComments = async () => {
   return resp.data
 }
 
-export const postComment = async (foodData) => {
-  const resp = await api.post('/foods', { food: foodData });
+export const postComment = async () => {
+  const resp = await api.post('/comments');
   return resp.data;
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import api from '../../services/apiconfig'
 import { useParams } from 'react-router'
+import CommentCreate from '../CommentCreate/CommentCreate'
 
 
 export default function NewsDetailContainer() {
@@ -26,14 +27,15 @@ export default function NewsDetailContainer() {
       <img src={story?.img_url4} alt='' />
       <img src={story?.img_url5} alt='' />
       </div>
-
+      <p>Comments</p>
       {story?.comments.map(comment => (
         <div className='comments'>
+          <p><i>{comment.name} says</i></p>
           <p>{comment.text}</p>
         </div>
       ))}
       {/* Dont call title unless story is true */}
-      <form>Create</form>
+      <CommentCreate />
     </>
   )
 }
