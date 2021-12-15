@@ -6,7 +6,7 @@ export const getAllComments = async () => {
 }
 
 export const postComment = async () => {
-  const resp = await api.post('/comments');
+  const resp = await api.post('/comments/:story_id');
   return resp.data;
 };
 
@@ -17,9 +17,4 @@ export const putFood = async (id, foodData) => {
 
 export const deleteFood = async (id) => {
   await api.delete(`/foods/${id}`);
-};
-
-export const addFlavor = async (idData) => {
-  const resp = await api.post('/foods/flavors', { food: idData });
-  return resp.data;
 };

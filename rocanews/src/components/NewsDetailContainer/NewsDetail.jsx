@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import api from '../../services/apiconfig'
 import { useParams } from 'react-router'
 import CommentCreate from '../CommentCreate/CommentCreate'
+import { postComment } from '../../services/comments'
 
 
 export default function NewsDetailContainer() {
@@ -17,15 +18,16 @@ export default function NewsDetailContainer() {
     getSpecificStory();
  } , [])
   
+  
   return (
     <>
       <p>{story?.title}</p>
       <div className='images'>
-      <img src={story?.img_url1} alt='' />
-      <img src={story?.img_url2} alt='' />
-      <img src={story?.img_url3} alt='' />
-      <img src={story?.img_url4} alt='' />
-      <img src={story?.img_url5} alt='' />
+      <img src={story?.img_url1} alt='' style={{ height: 800, width: 670 }}/>
+      <img src={story?.img_url2} alt='' style={{ height: 800 ,width: 670 }}/>
+      <img src={story?.img_url3} alt='' style={{ height: 800 ,width: 670 }}/>
+      <img src={story?.img_url4} alt='' style={{ height: 800 ,width: 670 }}/>
+      <img src={story?.img_url5} alt='' style={{ height: 800 ,width: 670 }}/>
       </div>
       <p>Comments</p>
       {story?.comments.map(comment => (

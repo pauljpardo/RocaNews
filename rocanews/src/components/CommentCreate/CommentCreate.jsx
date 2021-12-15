@@ -6,18 +6,35 @@ export default function CommentCreate() {
     text: ''
   })
   const handleChange = (e) => {
-    const { name, text, value } = e.target;
+    const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
-      [text]: value,
     }))
   }
+
+  // const handleCommentCreate = async (formData) => {
+  //   const newComment = await postComment(formData);
+  //   setComments(prevState => [...prevState, newComment]);
+  //   history.push('/comments');
+  // }
+
   return (
     <form>
       <h4>Create Comment</h4>
       <label>Name:
-        <input type='text' name='name' value='' onChange={handleChange} />
+        <input
+          type='text'
+          name='name'
+          value=''
+          onChange={handleChange} />
+      </label>
+      <label>Comment:
+        <input
+          type='text'
+          name='comment'
+          value=''
+          onChange={handleChange} />
       </label>
       <button>Post</button>
     </form>
