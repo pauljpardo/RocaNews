@@ -6,6 +6,8 @@ import CommentEdit from "../CommentEdit/CommentEdit";
 import { deleteComment, postComment, putComment } from "../../services/comments";
 import { Link } from 'react-router-dom'
 import './style.css'
+import Carousel from "react-material-ui-carousel";
+import { Paper, Button } from '@mui/material'
 
 
 export default function NewsDetailContainer() {
@@ -18,7 +20,6 @@ export default function NewsDetailContainer() {
   useEffect(() => {
     const getSpecificStory = async () => {
       const story = await api.get(`/stories/${id}`);
-      // return resp.data
       setStory(story.data);
       setComments(story.data.comments);
     };
@@ -45,17 +46,26 @@ export default function NewsDetailContainer() {
     );
   };
 
+  // const images = [story?.img_url1, story?.img_url2, story?.img_url3, story?.img_url4, story?.img_url5]
+  
+
+
   return (
     <>
-      <span><Link to='/allnews'>Back to All News</Link></span>
+      <Link to='/allnews'>Back to All News</Link>
       <p>{story?.title}</p>
-      <div className="images">
-        <img src={story?.img_url1} alt="" style={{ height: 800, width: 670 }} />
-        <img src={story?.img_url2} alt="" style={{ height: 800, width: 670 }} />
-        <img src={story?.img_url3} alt="" style={{ height: 800, width: 670 }} />
-        <img src={story?.img_url4} alt="" style={{ height: 800, width: 670 }} />
-        <img src={story?.img_url5} alt="" style={{ height: 800, width: 670 }} />
-      </div>
+      {/* <Carousel>
+        {
+          images.map((item, i) => <img src={item} key={i}  alt="News image" />)
+        }
+      </Carousel> */}
+      <div className="images"> 
+        <img src={story?.img_url1} alt="News image" />
+        <img src={story?.img_url2} alt="News image" />
+        <img src={story?.img_url3} alt="News image" />
+        <img src={story?.img_url4} alt="News image" />
+        <img src={story?.img_url5} alt="News image" />
+  </div>
       <p>Comments</p>
       {comments.map((comment) => (
         <div className="comments">
