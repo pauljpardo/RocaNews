@@ -10,8 +10,6 @@ import {
 } from "../../services/comments";
 import { Link } from "react-router-dom";
 import "./style.css";
-// import Carousel from "react-material-ui-carousel";
-// import { Paper, Button } from '@mui/material'
 
 export default function NewsDetailContainer() {
   const [story, setStory] = useState(null);
@@ -51,17 +49,11 @@ export default function NewsDetailContainer() {
     );
   };
 
-  // const images = [story?.img_url1, story?.img_url2, story?.img_url3, story?.img_url4, story?.img_url5]
-
   return (
     <>
       <Link to="/allnews" className='back-to'>Back to All News</Link>
       <p>{story?.title}</p>
-      {/* <Carousel>
-        {
-          images.map((item, i) => <img src={item} key={i}  alt="News image" />)
-        }
-      </Carousel> */}
+    
       <div className="images">
         <img src={story?.img_url1} alt="News image" />
         <img src={story?.img_url2} alt="News image" />
