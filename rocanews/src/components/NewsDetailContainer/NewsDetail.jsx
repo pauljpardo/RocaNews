@@ -55,7 +55,7 @@ export default function NewsDetailContainer() {
 
   return (
     <>
-      <Link to="/allnews">Back to All News</Link>
+      <Link to="/allnews" className='back-to'>Back to All News</Link>
       <p>{story?.title}</p>
       {/* <Carousel>
         {
