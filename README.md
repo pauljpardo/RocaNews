@@ -19,7 +19,7 @@
 
 **RocaNews** is a website based on revolutionizing the way news is presented and distributed. The past 5-10 years have shown the general population how skewed and biased Legacy news networks are and it is very clear they each have a specific agenda to push onto their viewers. RocaNews is a site dedicated to providing need-to-know stories that are Non-partisan and entertaining for all readers; Going over stories based on recent news and also random interesting stories everyone can learn some history and knowledge from. 
 
-[Deployed Site](link here)
+[https://rocanews.netlify.app/]
 
 <br>
 
