@@ -125,31 +125,30 @@ src
 
 #### Time Estimates
 
-| Task                            | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| ReadMe Creation       |    H     |     2 hrs      |     1.20 hr/min    |   -   |
-| Back End Creation / Plan       |    H     |     3 hrs      |     -    |   -   |
-| Back End Database               |    H     |     3 hrs      |     -      |    -     |
-| Seed and Create Data            |    H     |     3 hrs     |     -       |    -      |
-| Test Back End Routes            |    H     |     1 hrs      |     -    |    -   |
-| React File Structure            |    H     |     3 hrs      |     -     |    -   |
-| Front End Setup        |    H     |     3 hrs      |     -    |    -   |
-| Front End Routes and Testing    |    H     |     4 hrs      |     -      |    -     |
-| Layout Setup                    |    H     |     3 hrs      |     -       |    -      |
-| Navbar                          |    H     |     1 hrs      |     -     |    -    |
-| Footer                          |    H     |     1 hrs      |     -    |    -   |
-| Home Screen Functionality       |    H     |     4 hrs     |     -       |    -      |
-| All News (GET) Screen Functionality   |    H     |     4 hrs     |     -       |    -      |
-| Story Details Screen with C.U.D. Btns    |    H     |     4 hrs      |     -      |    -     |
-| Get, Edit, and Delete Comments Functionality |    H     |     3 hrs      |     -      |    -     |
-| Hamburger on Nav (tablet/mobile)|    H     |     1 hrs      |     -       |    -      |
-| Edit Comments Pop up Screen     |    H     |     1 hrs      |     -    |    -   |
-| Home Screen CSS                 |    H     |     2 hrs      |     -      |    -     |
-| All News Screen CSS               |    H     |     3 hrs      |     -      |    -     |
-| Story Details Screen CSS               |    H     |     3 hrs      |     -    |    -   |
-| Edit Comment Pop up CSS            |    H     |     1 hrs      |     -     |    -    |
-| TOTAL                           |          |     48 hrs     | - | - |
-
+| Task                            | Priority | Estimated Time | Time Invested | 
+| ------------------------------- | :------: | :------------: | :-----------: | 
+| ReadMe Creation       |    H     |     2 hrs      |     1.5 hrs    | 
+| Back End Creation / Plan       |    H     |     3 hrs      |     1 hr   | 
+| Back End Database               |    H     |     3 hrs      |     2 hrs     |
+| Seed and Create Data            |    H     |     3 hrs     |     0.5 hrs       |
+| Test Back End Routes            |    H     |     1 hrs      |     0.5 hrs    |
+| React File Structure            |    H     |     3 hrs      |     0.5 hrs     |
+| Front End Setup        |    H     |     3 hrs      |     3 hrs    |
+| Front End Routes and Testing    |    H     |     4 hrs      |     3 hrs      |
+| Layout Setup                    |    H     |     3 hrs      |     1 hr       |
+| Navbar  / Header                        |    H     |     1 hrs      |     1 hr     |
+| Footer                          |    H     |     1 hrs      |     0    |
+| Home Screen Functionality / Logic      |    H     |     4 hrs     |      2 hrs     |
+| All News (GET) Screen Functionality   |    H     |     4 hrs     |       2 hrs     |
+| Story Details Screen with C.U.D. Btns    |    H     |     4 hrs      |      4 hrs      |
+| Get, Edit, and Delete Comments Functionality |    H     |     3 hrs      |     5 hrs     |
+| Hamburger on Nav (tablet/mobile)|    H     |     1 hrs      |     0        |
+| Edit Comments Pop up Screen     |    H     |     1 hrs      |     IP    |
+| Home Screen CSS                 |    H     |     2 hrs      |     2 hrs      |
+| All News Screen CSS               |    H     |     3 hrs      |     1 hrs      |
+| Story Details Screen CSS               |    H     |     3 hrs      |     1 hrs / IP    |
+| Edit Comment Pop up CSS            |    H     |     1 hrs      |     IP     |
+| TOTAL                           |          |     48 hrs     |  | 
 <br>
 
 ### Server (Back End)
