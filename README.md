@@ -129,26 +129,26 @@ src
 | ------------------------------- | :------: | :------------: | :-----------: | 
 | ReadMe Creation       |    H     |     2 hrs      |     1.5 hrs    | 
 | Back End Creation / Plan       |    H     |     3 hrs      |     1 hr   | 
-| Back End Database               |    H     |     3 hrs      |     2 hrs     |
+| Back End Database               |    H     |     3 hrs      |     3 hrs     |
 | Seed and Create Data            |    H     |     3 hrs     |     0.5 hrs       |
 | Test Back End Routes            |    H     |     1 hrs      |     0.5 hrs    |
 | React File Structure            |    H     |     3 hrs      |     0.5 hrs     |
 | Front End Setup        |    H     |     3 hrs      |     3 hrs    |
 | Front End Routes and Testing    |    H     |     4 hrs      |     3 hrs      |
-| Layout Setup                    |    H     |     3 hrs      |     1 hr       |
+| Layout Setup                    |    H     |     3 hrs      |     2 hr       |
 | Navbar  / Header                        |    H     |     1 hrs      |     1 hr     |
 | Footer                          |    H     |     1 hrs      |     0    |
-| Home Screen Functionality / Logic      |    H     |     4 hrs     |      2 hrs     |
-| All News (GET) Screen Functionality   |    H     |     4 hrs     |       2 hrs     |
-| Story Details Screen with C.U.D. Btns    |    H     |     4 hrs      |      4 hrs      |
+| Home Screen Functionality / Logic      |    H     |     2 hrs     |      2 hrs     |
+| All News (GET) Screen Functionality   |    H     |     2 hrs     |       2 hrs     |
+| Story Details Screen with C.U.D. Btns    |    H     |     3 hrs      |      4 hrs      |
 | Get, Edit, and Delete Comments Functionality |    H     |     3 hrs      |     5 hrs     |
 | Hamburger on Nav (tablet/mobile)|    H     |     1 hrs      |     0        |
 | Edit Comments Pop up Screen     |    H     |     1 hrs      |     IP    |
 | Home Screen CSS                 |    H     |     2 hrs      |     2 hrs      |
-| All News Screen CSS               |    H     |     3 hrs      |     1 hrs      |
-| Story Details Screen CSS               |    H     |     3 hrs      |     1 hrs / IP    |
+| All News Screen CSS               |    H     |     2 hrs      |     1 hrs      |
+| Story Details Screen CSS               |    H     |     2 hrs      |     1 hrs / IP    |
 | Edit Comment Pop up CSS            |    H     |     1 hrs      |     IP     |
-| TOTAL                           |          |     48 hrs     |  | 
+| TOTAL                           |          |     41 hrs     | 31 hrs | 
 <br>
 
 ### Server (Back End)
@@ -167,7 +167,6 @@ src
 - _Users will be able to create account_
 - _Users will be able to like comments and posts_
 - _Timestamps to comments_
-- _User avatars next to username_
 - _Create My Profile page where user can view their liked articles_
 - _Loading Screen animations_
 - _Search bar_
@@ -176,53 +175,67 @@ src
 
 ## Code Showcase
 
-```
-console.log(test)
-```
-The speaker, COBB, is 35, handsome, tailored. A young
-Japanese man, SAITO, eats as he listens.
-COBB
-A bacteria? A virus?
-Cobb gestures at their feast with his wine glassCOBB
-An intestinal worm?
-Saito’s fork pauses, mid-air. Cobb GRINS. A third man is at
-the table- ARTHUR. He jumps in to save the pitch
+Schema
 
 ```
-console.log(test)
-```
-ARTHUR
-What Mr. Cobb is trying to sayCOBB
-An idea.
-Saito looks at Cobb, curious.
-2.
-COBB
-Resilient, highly contagious. Once
-an idea’s taken hold in the brain
-it’s almost impossible to
-eradicate. 
-```
-console.log(test)
-```
-A person can cover it
-up, ignore it- but it stays there.
-SAITO
-But surely-to forget...?
-COBB
-Information, yes. But an idea?
-Fully formed, understood? That
-sticks...
+create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.string "text"
+    t.bigint "story_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["story_id"], name: "index_comments_on_story_id"
+  end
 
-## Code Issues & Resolutions
+  create_table "stories", force: :cascade do |t|
+    t.string "img_url1"
+    t.string "img_url2"
+    t.string "img_url3"
+    t.string "img_url4"
+    t.string "img_url5"
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
-SAITO
-For someone like you to steal?
-ARTHUR
-Yes. In the dream state, conscious
-defenses are lowered and your
-thoughts become vulnerable to
-theft. It’s called extraction.
+  add_foreign_key "comments", "stories"
+end
+```
+One to Many Table Relationship
 
-``` 
-console.log(test)
+```
+class Story < ApplicationRecord
+  has_many :comments, dependent: :destroy
+end
+
+class Comment < ApplicationRecord
+  belongs_to :story
+end
+```
+
+Create / Update / Delete handlers
+
+```
+ const handleCommentCreate = async (formData) => {
+    const newComment = await postComment({ ...formData, story_id: id });
+    setComments((prevState) => [...prevState, newComment]);
+  };
+
+  const handleCommentEdit = async (formData, commentId) => {
+    const newComment = await putComment(formData, commentId);
+    setComments((prevState) =>
+      prevState.map((comment) => {
+        return comment.id === commentId ? newComment : comment;
+      })
+    );
+    setIsEditing(false);
+  };
+
+  const handleCommentDelete = async (id) => {
+    await deleteComment(id);
+    setComments((prevState) =>
+      prevState.filter((comment) => comment.id !== id)
+    );
+  };
+  
 ```
